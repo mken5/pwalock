@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<info>
+	<id>pwalock</id>
+	<name>PWA Lock</name>
+	<summary>Little privacy protection for Nextcloud running as a PWA</summary>
+	<description>
+		Adds a client-side privacy lock overlay for Nextcloud when used as a Progressive Web App (PWA).
+		The overlay can be triggered on idle and/or when the app is backgrounded, and can require a user code to unlock.
+		After repeated failed attempts the app can notify the user and optionally force a logout.
+	</description>
+
+	<version>0.2.5</version>
+	<licence>MIT</licence>
+	<author>Mken</author>
+
+	<namespace>PwaLock</namespace>
+
+	<dependencies>
+		<nextcloud min-version="32" max-version="32"/>
+	</dependencies>
+
+	<types>
+		<filesystem/>
+	</types>
+
+	<settings>
+		<admin>OCA\PwaLock\Settings\Admin</admin>
+		<admin-section>OCA\PwaLock\Sections\AdminSection</admin-section>
+		<personal>OCA\PwaLock\Settings\Personal</personal>
+		<personal-section>OCA\PwaLock\Sections\PersonalSection</personal-section>
+	</settings>
+</info>
