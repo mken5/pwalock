@@ -1,0 +1,71 @@
+#pwalock-overlay{
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.70);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2147483647;
+}
+
+/* Locked state */
+html.pwalock-locked #pwalock-overlay{
+	display: flex;
+}
+
+/* Nextcloud-like modal card */
+#pwalock-overlay .pwalock-card{
+	width: min(460px, 92vw);
+	background: var(--color-main-background);
+	color: var(--color-main-text);
+	border-radius: var(--border-radius-large, 16px);
+	box-shadow: var(--shadow-card, 0 10px 30px rgba(0,0,0,0.35));
+	padding: 24px;
+	border: 1px solid var(--color-border, rgba(255,255,255,0.08));
+}
+
+#pwalock-overlay .pwalock-header{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 8px;
+}
+
+#pwalock-overlay .pwalock-header h2{
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+#pwalock-overlay .pwalock-sub{
+	margin: 0 0 16px 0;
+	color: var(--color-text-maxcontrast);
+}
+
+#pwalock-overlay .pwalock-field{
+	margin-top: 12px;
+}
+
+#pwalock-overlay input#pwalock-key{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#pwalock-overlay .pwalock-actions{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-top: 14px;
+}
+
+#pwalock-overlay .pwalock-err{
+	margin-top: 10px;
+	min-height: 20px;
+	color: var(--color-error, #d64545);
+}
+
+#pwalock-overlay .pwalock-hint{
+	margin: 12px 0 0 0;
+	color: var(--color-text-maxcontrast);
+	font-size: 12px;
+}
