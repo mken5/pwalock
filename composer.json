@@ -2,7 +2,7 @@
   "name": "pwalock/pwalock",
   "description": "PWA privacy lock overlay for Nextcloud",
   "type": "project",
-  "license": "AGPL-3.0-or-later",
+  "license": "MITr",
   "autoload": {
     "psr-4": {
       "OCA\\PwaLock\\": "lib/"
